@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 249, 250, 251;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.dark {
+  --foreground-rgb: 248, 250, 252;
+  --background-start-rgb: 15, 23, 42;
+  --background-end-rgb: 30, 41, 59;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Form elements */
+input, select, textarea {
+  @apply transition-all duration-200;
+}
+
+input:focus, select:focus, textarea:focus {
+  @apply outline-none ring-2 ring-primary-500 border-primary-500;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* Step indicator animations */
+.step-indicator {
+  @apply transition-all duration-300;
+}
+
+/* Code block styling */
+.code-block {
+  @apply bg-slate-900 text-slate-100 rounded-lg p-4 font-mono text-sm overflow-x-auto;
+}
+
+/* Badge styling */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-blue {
+  @apply bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200;
+}
+
+.badge-green {
+  @apply bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200;
+}
+
+.badge-purple {
+  @apply bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200;
+}
+
+.badge-orange {
+  @apply bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200;
+}
+
+/* Range input styling for dark mode */
+input[type="range"] {
+  @apply accent-primary-600;
+}
+
+.dark input[type="range"]::-webkit-slider-runnable-track {
+  background: #334155;
+}
+
+/* Select dropdown dark mode */
+.dark select option {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+.dark :focus-visible {
+  @apply ring-offset-slate-900;
+}
+
+/* Skip to content link for accessibility */
+.skip-to-content {
+  @apply absolute -top-10 left-0 bg-primary-600 text-white px-4 py-2 z-50 transition-all;
+}
+
+.skip-to-content:focus {
+  @apply top-0;
+}
+
+/* Smooth transitions for theme changes */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Disable transitions on page load */
+.no-transitions *, .no-transitions *::before, .no-transitions *::after {
+  transition: none !important;
+}
