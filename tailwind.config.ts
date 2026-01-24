@@ -6,22 +6,34 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
+        // Colores corporativos Upgrade Hub
+        'upgrade-yellow': {
+          DEFAULT: '#D4FF00',
+          light: '#DAF800',
+        },
+        'upgrade-black': '#000000',
+        'upgrade-white': '#FFFFFF',
+        'upgrade-gray': {
+          light: '#FAFAF8',
+          DEFAULT: '#484451',
+          teal: '#78CFBF',
+        },
+        'upgrade-blue': '#0077B6',
+        // Alias para compatibilidad con componentes existentes
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
+          50: '#f0fcf4',
+          100: '#e6fbe9',
+          200: '#d4ff00',
+          300: '#d4ff00',
+          400: '#d4ff00',
+          500: '#0077B6',
+          600: '#0077B6',
+          700: '#005a8c',
+          800: '#004468',
+          900: '#002d44',
         },
       },
       animation: {

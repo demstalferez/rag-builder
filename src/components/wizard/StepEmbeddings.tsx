@@ -9,10 +9,10 @@ import SelectionCard from './SelectionCard';
 export default function StepEmbeddings({ config, onUpdate }: StepProps) {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+      <h2 className="text-2xl font-bold text-slate-900  mb-2">
         Modelo de Embeddings
       </h2>
-      <p className="text-slate-600 dark:text-slate-400 mb-8">
+      <p className="text-slate-600  mb-8">
         Los embeddings convierten texto en vectores para la busqueda semantica
       </p>
 
@@ -35,14 +35,14 @@ export default function StepEmbeddings({ config, onUpdate }: StepProps) {
       </div>
 
       <div>
-        <label htmlFor="embedding-model" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+        <label htmlFor="embedding-model" className="block text-sm font-medium text-slate-700  mb-2">
           Modelo de Embeddings
         </label>
         <select
           id="embedding-model"
           value={config.embedding.model}
           onChange={(e) => onUpdate({ embedding: { ...config.embedding, model: e.target.value } })}
-          className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+          className="w-full px-4 py-3 rounded-lg border border-slate-300  bg-white  text-slate-900  focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
         >
           {EMBEDDING_MODELS[config.embedding.provider].map((model) => (
             <option key={model} value={model}>{model}</option>

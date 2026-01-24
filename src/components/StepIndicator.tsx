@@ -18,7 +18,7 @@ export default function StepIndicator({ steps, currentStep }: StepIndicatorProps
   return (
     <nav aria-label="Progreso del wizard" className="relative">
       {/* Progress bar background */}
-      <div className="absolute top-6 left-0 right-0 h-0.5 bg-slate-200 dark:bg-slate-700" aria-hidden="true" />
+      <div className="absolute top-6 left-0 right-0 h-0.5 bg-slate-200 " aria-hidden="true" />
 
       {/* Progress bar fill */}
       <div
@@ -44,8 +44,8 @@ export default function StepIndicator({ steps, currentStep }: StepIndicatorProps
                   ${isCompleted
                     ? 'bg-primary-500 border-primary-500 text-white'
                     : isCurrent
-                    ? 'bg-white dark:bg-slate-800 border-primary-500 text-primary-500 shadow-lg dark:shadow-primary-500/20'
-                    : 'bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-600 text-slate-400 dark:text-slate-500'
+                    ? 'bg-white  border-primary-500 text-primary-500 shadow-lg '
+                    : 'bg-white  border-slate-300  text-slate-400 '
                   }
                 `}
                 aria-current={isCurrent ? 'step' : undefined}
@@ -68,8 +68,8 @@ export default function StepIndicator({ steps, currentStep }: StepIndicatorProps
                 className={`
                   mt-2 text-xs font-medium transition-colors duration-300
                   ${isCompleted || isCurrent
-                    ? 'text-primary-600 dark:text-primary-400'
-                    : 'text-slate-400 dark:text-slate-500'
+                    ? 'text-primary-600 '
+                    : 'text-slate-400 '
                   }
                 `}
               >

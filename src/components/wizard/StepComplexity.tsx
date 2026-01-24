@@ -29,10 +29,10 @@ const COMPLEXITY_LEVELS: { id: ComplexityLevel; name: string; description: strin
 export default function StepComplexity({ config, onSelect }: StepComplexityProps) {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+      <h2 className="text-2xl font-bold text-slate-900  mb-2">
         Elige el nivel de complejidad
       </h2>
-      <p className="text-slate-600 dark:text-slate-400 mb-8">
+      <p className="text-slate-600  mb-8">
         Selecciona una configuracion base que se ajuste a tus necesidades
       </p>
 

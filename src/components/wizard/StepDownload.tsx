@@ -14,10 +14,10 @@ export default function StepDownload({
 }: StepDownloadProps) {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+      <h2 className="text-2xl font-bold text-slate-900  mb-2">
         Revisa y Descarga
       </h2>
-      <p className="text-slate-600 dark:text-slate-400 mb-8">
+      <p className="text-slate-600  mb-8">
         Configura los ultimos detalles y descarga tu proyecto
       </p>
 
@@ -25,7 +25,7 @@ export default function StepDownload({
         {/* Project details */}
         <div className="space-y-6">
           <div>
-            <label htmlFor="project-name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+            <label htmlFor="project-name" className="block text-sm font-medium text-slate-700  mb-2">
               Nombre del Proyecto
             </label>
             <input
@@ -33,57 +33,57 @@ export default function StepDownload({
               type="text"
               value={config.projectName}
               onChange={(e) => onUpdate({ projectName: e.target.value })}
-              className={`w-full px-4 py-3 rounded-lg border bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 ${
+              className={`w-full px-4 py-3 rounded-lg border bg-white  text-slate-900  focus:ring-2 focus:ring-primary-500 focus:border-primary-500 ${
                 validationErrors.projectName
-                  ? 'border-red-500 dark:border-red-400'
-                  : 'border-slate-300 dark:border-slate-600'
+                  ? 'border-red-500 '
+                  : 'border-slate-300 '
               }`}
               placeholder="mi-proyecto-rag"
               aria-invalid={!!validationErrors.projectName}
               aria-describedby={validationErrors.projectName ? 'project-name-error' : undefined}
             />
             {validationErrors.projectName && (
-              <p id="project-name-error" className="mt-1 text-sm text-red-600 dark:text-red-400">
+              <p id="project-name-error" className="mt-1 text-sm text-red-600 ">
                 {validationErrors.projectName}
               </p>
             )}
-            <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+            <p className="mt-1 text-xs text-slate-500 ">
               Solo letras, numeros, guiones y guiones bajos
             </p>
           </div>
 
           <div>
-            <label htmlFor="project-description" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+            <label htmlFor="project-description" className="block text-sm font-medium text-slate-700  mb-2">
               Descripcion
             </label>
             <textarea
               id="project-description"
               value={config.description}
               onChange={(e) => onUpdate({ description: e.target.value })}
-              className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              className="w-full px-4 py-3 rounded-lg border border-slate-300  bg-white  text-slate-900  focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
               rows={3}
               placeholder="Describe tu proyecto RAG..."
             />
           </div>
 
           <div className="space-y-3">
-            <p className="font-medium text-slate-900 dark:text-slate-100">Incluir en el proyecto:</p>
+            <p className="font-medium text-slate-900 ">Incluir en el proyecto:</p>
 
             {[
               { key: 'includeDocker', label: 'Docker (Dockerfile + docker-compose)', description: 'Facilita el despliegue con contenedores' },
               { key: 'includeTests', label: 'Tests con pytest', description: 'Pruebas unitarias para el pipeline' },
               { key: 'includeAPI', label: 'API REST con FastAPI', description: 'Endpoints para consultas via HTTP' },
             ].map(({ key, label, description }) => (
-              <label key={key} className="flex items-start space-x-3 cursor-pointer p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+              <label key={key} className="flex items-start space-x-3 cursor-pointer p-3 rounded-lg hover:bg-slate-50 transition-colors">
                 <input
                   type="checkbox"
                   checked={config[key as keyof typeof config] as boolean}
                   onChange={(e) => onUpdate({ [key]: e.target.checked })}
-                  className="w-5 h-5 mt-0.5 rounded border-slate-300 dark:border-slate-600 text-primary-600 focus:ring-primary-500"
+                  className="w-5 h-5 mt-0.5 rounded border-slate-300  text-primary-600 focus:ring-primary-500"
                 />
                 <div>
-                  <span className="text-slate-900 dark:text-slate-100 font-medium">{label}</span>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">{description}</p>
+                  <span className="text-slate-900  font-medium">{label}</span>
+                  <p className="text-xs text-slate-500 ">{description}</p>
                 </div>
               </label>
             ))}
@@ -91,8 +91,8 @@ export default function StepDownload({
         </div>
 
         {/* Summary */}
-        <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-6">
-          <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Resumen de Configuracion</h3>
+        <div className="bg-slate-50  rounded-xl p-6">
+          <h3 className="font-semibold text-slate-900  mb-4">Resumen de Configuracion</h3>
 
           <div className="space-y-3 text-sm">
             <SummaryRow label="Nivel" value={config.complexity} capitalize />
@@ -106,9 +106,9 @@ export default function StepDownload({
             <SummaryRow label="Reranking" value={config.retrieval.useReranking ? 'Si' : 'No'} />
           </div>
 
-          <div className="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700">
-            <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-2">Archivos incluidos:</h4>
-            <ul className="text-sm text-slate-600 dark:text-slate-400 space-y-1">
+          <div className="mt-6 pt-4 border-t border-slate-200 ">
+            <h4 className="font-medium text-slate-900  mb-2">Archivos incluidos:</h4>
+            <ul className="text-sm text-slate-600  space-y-1">
               <li>- Codigo fuente Python completo</li>
               <li>- requirements.txt</li>
               <li>- .env.example</li>
@@ -129,7 +129,7 @@ export default function StepDownload({
             bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800
             text-white shadow-lg hover:shadow-xl transition-all duration-200
             disabled:opacity-50 disabled:cursor-not-allowed
-            focus:outline-none focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-800"
+            focus:outline-none focus:ring-4 focus:ring-primary-300"
           aria-busy={isGenerating}
         >
           {isGenerating ? (
@@ -155,8 +155,8 @@ export default function StepDownload({
 function SummaryRow({ label, value, capitalize = false }: { label: string; value: string; capitalize?: boolean }) {
   return (
     <div className="flex justify-between">
-      <span className="text-slate-600 dark:text-slate-400">{label}:</span>
-      <span className={`font-medium text-slate-900 dark:text-slate-100 ${capitalize ? 'capitalize' : ''}`}>
+      <span className="text-slate-600 ">{label}:</span>
+      <span className={`font-medium text-slate-900  ${capitalize ? 'capitalize' : ''}`}>
         {value}
       </span>
     </div>

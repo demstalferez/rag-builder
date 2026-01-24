@@ -27,17 +27,17 @@ function CodeCell({ cell, isDark }: { cell: NotebookCell; isDark: boolean }) {
   const source = cell.source.join('');
 
   return (
-    <div className="my-4 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700">
-      <div className="bg-slate-100 dark:bg-slate-800 px-4 py-2 flex items-center justify-between">
+    <div className="my-4 rounded-lg overflow-hidden border border-slate-200 ">
+      <div className="bg-slate-100  px-4 py-2 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+          <span className="text-xs font-mono text-slate-500 ">
             [{cell.execution_count || ' '}]
           </span>
-          <span className="text-xs text-slate-500 dark:text-slate-400">Python</span>
+          <span className="text-xs text-slate-500 ">Python</span>
         </div>
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+          className="text-slate-500 hover:text-slate-700"
         >
           <svg
             className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
@@ -65,7 +65,7 @@ function CodeCell({ cell, isDark }: { cell: NotebookCell; isDark: boolean }) {
           </SyntaxHighlighter>
 
           {cell.outputs && cell.outputs.length > 0 && (
-            <div className="border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 p-4">
+            <div className="border-t border-slate-200  bg-slate-50  p-4">
               <CellOutputs outputs={cell.outputs} />
             </div>
           )}
@@ -81,7 +81,7 @@ function CellOutputs({ outputs }: { outputs: any[] }) {
       {outputs.map((output, idx) => {
         if (output.output_type === 'stream') {
           return (
-            <pre key={idx} className="text-sm font-mono text-slate-700 dark:text-slate-300 whitespace-pre-wrap">
+            <pre key={idx} className="text-sm font-mono text-slate-700  whitespace-pre-wrap">
               {output.text?.join('') || ''}
             </pre>
           );
@@ -119,7 +119,7 @@ function CellOutputs({ outputs }: { outputs: any[] }) {
               ? data['text/plain'].join('')
               : data['text/plain'];
             return (
-              <pre key={idx} className="text-sm font-mono text-slate-700 dark:text-slate-300 whitespace-pre-wrap">
+              <pre key={idx} className="text-sm font-mono text-slate-700  whitespace-pre-wrap">
                 {text}
               </pre>
             );
@@ -128,7 +128,7 @@ function CellOutputs({ outputs }: { outputs: any[] }) {
 
         if (output.output_type === 'error') {
           return (
-            <pre key={idx} className="text-sm font-mono text-red-600 dark:text-red-400 whitespace-pre-wrap">
+            <pre key={idx} className="text-sm font-mono text-red-600  whitespace-pre-wrap">
               {output.traceback?.join('\n') || output.evalue || 'Error'}
             </pre>
           );
@@ -148,7 +148,7 @@ function MarkdownCell({ cell }: { cell: NotebookCell }) {
   const sectionId = sectionMatch ? `section-${sectionMatch[1]}` : undefined;
 
   return (
-    <div id={sectionId} className="my-6 prose prose-slate dark:prose-invert max-w-none prose-headings:scroll-mt-20">
+    <div id={sectionId} className="my-6 prose prose-slate  max-w-none prose-headings:scroll-mt-20">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
@@ -164,7 +164,7 @@ function MarkdownCell({ cell }: { cell: NotebookCell }) {
                 {String(children).replace(/\n$/, '')}
               </SyntaxHighlighter>
             ) : (
-              <code className={`${className} bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-sm`} {...props}>
+              <code className={`${className} bg-slate-100  px-1.5 py-0.5 rounded text-sm`} {...props}>
                 {children}
               </code>
             );
@@ -172,7 +172,7 @@ function MarkdownCell({ cell }: { cell: NotebookCell }) {
           table({ children }) {
             return (
               <div className="overflow-x-auto my-4">
-                <table className="min-w-full divide-y divide-slate-200 dark:divide-slate-700">
+                <table className="min-w-full divide-y divide-slate-200 ">
                   {children}
                 </table>
               </div>
@@ -180,42 +180,42 @@ function MarkdownCell({ cell }: { cell: NotebookCell }) {
           },
           th({ children }) {
             return (
-              <th className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-left text-sm font-semibold text-slate-900 dark:text-slate-100">
+              <th className="px-4 py-2 bg-slate-100  text-left text-sm font-semibold text-slate-900 ">
                 {children}
               </th>
             );
           },
           td({ children }) {
             return (
-              <td className="px-4 py-2 text-sm text-slate-700 dark:text-slate-300 border-t border-slate-200 dark:border-slate-700">
+              <td className="px-4 py-2 text-sm text-slate-700  border-t border-slate-200 ">
                 {children}
               </td>
             );
           },
           blockquote({ children }) {
             return (
-              <blockquote className="border-l-4 border-primary-500 pl-4 py-2 my-4 bg-slate-50 dark:bg-slate-800/50 rounded-r-lg">
+              <blockquote className="border-l-4 border-primary-500 pl-4 py-2 my-4 bg-slate-50  rounded-r-lg">
                 {children}
               </blockquote>
             );
           },
           h1({ children }) {
             return (
-              <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mt-12 mb-6 pb-2 border-b border-slate-200 dark:border-slate-700">
+              <h1 className="text-3xl font-bold text-slate-900  mt-12 mb-6 pb-2 border-b border-slate-200 ">
                 {children}
               </h1>
             );
           },
           h2({ children }) {
             return (
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mt-10 mb-4">
+              <h2 className="text-2xl font-bold text-slate-900  mt-10 mb-4">
                 {children}
               </h2>
             );
           },
           h3({ children }) {
             return (
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100 mt-8 mb-3">
+              <h3 className="text-xl font-semibold text-slate-900  mt-8 mb-3">
                 {children}
               </h3>
             );
@@ -250,7 +250,7 @@ export default function NotebookViewer({ notebook }: NotebookViewerProps) {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 md:p-8">
+    <div className="bg-white  rounded-xl border border-slate-200  p-6 md:p-8">
       {notebook.cells.map((cell, index) => {
         if (cell.cell_type === 'markdown') {
           return <MarkdownCell key={index} cell={cell} />;

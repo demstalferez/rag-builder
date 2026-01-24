@@ -124,8 +124,8 @@ export default function ConfigWizard() {
     return (
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="animate-pulse">
-          <div className="h-16 bg-slate-200 dark:bg-slate-700 rounded-lg mb-8"></div>
-          <div className="h-96 bg-slate-200 dark:bg-slate-700 rounded-xl"></div>
+          <div className="h-16 bg-slate-200  rounded-lg mb-8"></div>
+          <div className="h-96 bg-slate-200  rounded-xl"></div>
         </div>
       </div>
     );
@@ -138,13 +138,13 @@ export default function ConfigWizard() {
 
       {/* Persistence indicator & Reset button */}
       <div className="mt-4 flex items-center justify-between text-sm">
-        <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+        <div className="flex items-center gap-2 text-slate-500 ">
           <Save className="w-4 h-4" aria-hidden="true" />
           <span>Progreso guardado automaticamente</span>
         </div>
         <button
           onClick={() => setShowResetConfirm(true)}
-          className="flex items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+          className="flex items-center gap-1 text-slate-500  hover:text-red-600 transition-colors"
           aria-label="Reiniciar configuracion"
         >
           <RotateCcw className="w-4 h-4" aria-hidden="true" />
@@ -160,17 +160,17 @@ export default function ConfigWizard() {
           aria-modal="true"
           aria-labelledby="reset-dialog-title"
         >
-          <div className="bg-white dark:bg-slate-800 rounded-xl p-6 max-w-md mx-4 shadow-2xl">
-            <h3 id="reset-dialog-title" className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2">
+          <div className="bg-white  rounded-xl p-6 max-w-md mx-4 shadow-2xl">
+            <h3 id="reset-dialog-title" className="text-lg font-semibold text-slate-900  mb-2">
               Reiniciar configuracion?
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 mb-6">
+            <p className="text-slate-600  mb-6">
               Esto eliminara toda tu configuracion guardada y volvera a los valores por defecto.
             </p>
             <div className="flex gap-3 justify-end">
               <button
                 onClick={() => setShowResetConfirm(false)}
-                className="px-4 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                className="px-4 py-2 rounded-lg text-slate-700  hover:bg-slate-100 transition-colors"
               >
                 Cancelar
               </button>
@@ -187,9 +187,9 @@ export default function ConfigWizard() {
 
       {/* Warnings */}
       {warnings.length > 0 && currentStep === STEPS.length && (
-        <div className="mt-4 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg">
-          <h4 className="font-medium text-amber-800 dark:text-amber-200 mb-2">Recomendaciones:</h4>
-          <ul className="list-disc list-inside space-y-1 text-sm text-amber-700 dark:text-amber-300">
+        <div className="mt-4 p-4 bg-amber-50  border border-amber-200  rounded-lg">
+          <h4 className="font-medium text-amber-800  mb-2">Recomendaciones:</h4>
+          <ul className="list-disc list-inside space-y-1 text-sm text-amber-700 ">
             {warnings.map((warning, i) => (
               <li key={i}>{warning}</li>
             ))}
@@ -198,7 +198,7 @@ export default function ConfigWizard() {
       )}
 
       {/* Step Content */}
-      <div className="mt-8 bg-white dark:bg-slate-900 rounded-xl shadow-lg p-8 border border-slate-200 dark:border-slate-700">
+      <div className="mt-8 bg-white  rounded-xl shadow-lg p-8 border border-slate-200 ">
         {currentStep === 1 && (
           <StepComplexity
             config={config}
@@ -259,9 +259,9 @@ export default function ConfigWizard() {
           disabled={currentStep === 1}
           className="flex items-center space-x-2 px-6 py-3 rounded-lg font-medium
             disabled:opacity-50 disabled:cursor-not-allowed
-            bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700
-            text-slate-700 dark:text-slate-300 transition-colors
-            focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+            bg-slate-100  hover:bg-slate-200
+            text-slate-700  transition-colors
+            focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           aria-label="Paso anterior"
         >
           <ChevronLeft className="w-5 h-5" aria-hidden="true" />
@@ -269,7 +269,7 @@ export default function ConfigWizard() {
         </button>
 
         {/* Step counter */}
-        <span className="text-sm text-slate-500 dark:text-slate-400">
+        <span className="text-sm text-slate-500 ">
           Paso {currentStep} de {STEPS.length}
         </span>
 
@@ -278,7 +278,7 @@ export default function ConfigWizard() {
             onClick={nextStep}
             className="flex items-center space-x-2 px-6 py-3 rounded-lg font-medium
               bg-primary-600 hover:bg-primary-700 text-white transition-colors
-              focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+              focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             aria-label="Paso siguiente"
           >
             <span>Siguiente</span>
@@ -292,8 +292,8 @@ export default function ConfigWizard() {
       </div>
 
       {/* Keyboard shortcuts hint */}
-      <p className="mt-4 text-center text-xs text-slate-400 dark:text-slate-500">
-        Usa <kbd className="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-xs">Alt</kbd> + <kbd className="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-xs">&#8592;</kbd> / <kbd className="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-xs">&#8594;</kbd> para navegar
+      <p className="mt-4 text-center text-xs text-slate-400 ">
+        Usa <kbd className="px-1.5 py-0.5 bg-slate-100  rounded text-xs">Alt</kbd> + <kbd className="px-1.5 py-0.5 bg-slate-100  rounded text-xs">&#8592;</kbd> / <kbd className="px-1.5 py-0.5 bg-slate-100  rounded text-xs">&#8594;</kbd> para navegar
       </p>
     </div>
   );
