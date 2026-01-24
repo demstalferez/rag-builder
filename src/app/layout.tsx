@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import './globals.css'
-import ThemeToggle from '@/components/ThemeToggle'
+import Header from '@/components/Header'
 
 export const metadata: Metadata = {
   title: 'RAG Builder - Generador de Proyectos RAG | Upgrade Hub & CSIC',
@@ -17,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-        {/* Prevent flash of wrong theme */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -35,125 +35,114 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        {/* Skip to content link for accessibility */}
         <a href="#main-content" className="skip-to-content">
           Saltar al contenido principal
         </a>
 
         <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950">
-          {/* Header */}
-          <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex justify-between items-center h-16">
-                <div className="flex items-center space-x-4">
-                  {/* Logos institucionales */}
-                  <div className="flex items-center space-x-3 pr-4 border-r border-slate-200 dark:border-slate-700">
-                    <Image
-                      src="/logoupgradehub.svg"
-                      alt="Upgrade Hub"
-                      width={120}
-                      height={28}
-                      className="h-7 w-auto dark:invert"
-                      priority
-                    />
-                    <Image
-                      src="/1-CSIC-Logotipo-COLOR-TRANSPARENTE.png"
-                      alt="CSIC"
-                      width={80}
-                      height={28}
-                      className="h-7 w-auto"
-                      priority
-                    />
-                  </div>
-                  {/* App branding */}
-                  <div className="flex items-center space-x-3">
-                    <div className="w-9 h-9 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h1 className="text-lg font-bold text-slate-900 dark:text-slate-100">RAG Builder</h1>
-                      <p className="text-xs text-slate-500 dark:text-slate-400">Generador de Proyectos RAG</p>
-                    </div>
-                  </div>
-                </div>
-                <nav className="flex items-center space-x-4">
-                  <div className="hidden md:flex items-center space-x-6">
-                    <a href="/teoria" className="text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 text-sm font-medium transition-colors flex items-center">
-                      <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                      </svg>
-                      Teoria RAG
-                    </a>
-                    <a href="/normativa" className="text-slate-600 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 text-sm font-medium transition-colors flex items-center">
-                      <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
-                      Normativa IA
-                    </a>
-                    <a href="/guia_completa_rag.ipynb" download className="text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 text-sm font-medium transition-colors flex items-center">
-                      <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                      </svg>
-                      Notebook
-                    </a>
-                    <a
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 text-sm font-medium transition-colors flex items-center space-x-1"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                      </svg>
-                      <span>GitHub</span>
-                    </a>
-                  </div>
-                  <ThemeToggle />
-                </nav>
-              </div>
-            </div>
-          </header>
+          <Header />
 
-          {/* Main content */}
           <main id="main-content" className="flex-grow" tabIndex={-1}>
             {children}
           </main>
 
           {/* Footer */}
-          <footer className="bg-slate-900 dark:bg-slate-950 text-slate-400 py-8 border-t border-slate-800">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              {/* Logos institucionales */}
-              <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-6 pb-6 border-b border-slate-800">
-                <span className="text-sm text-slate-500">Proyecto desarrollado en colaboracion con:</span>
-                <div className="flex items-center gap-6">
-                  <Image
-                    src="/logoupgradehub.svg"
-                    alt="Upgrade Hub"
-                    width={140}
-                    height={32}
-                    className="h-8 w-auto invert opacity-80 hover:opacity-100 transition-opacity"
-                  />
-                  <Image
-                    src="/1-CSIC-Logotipo-COLOR-TRANSPARENTE.png"
-                    alt="CSIC - Consejo Superior de Investigaciones Cientificas"
-                    width={100}
-                    height={32}
-                    className="h-8 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
-                  />
+          <footer className="bg-slate-900 dark:bg-slate-950 text-slate-400 border-t border-slate-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+              {/* Main footer content */}
+              <div className="grid md:grid-cols-3 gap-8 mb-8">
+                {/* About */}
+                <div>
+                  <div className="flex items-center space-x-2 mb-3">
+                    <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                      </svg>
+                    </div>
+                    <span className="font-semibold text-white">RAG Builder</span>
+                  </div>
+                  <p className="text-sm text-slate-500">
+                    Generador visual de proyectos RAG. Parte del programa de formacion en IA del CSIC.
+                  </p>
+                </div>
+
+                {/* Links */}
+                <div>
+                  <h3 className="font-semibold text-white mb-3">Recursos</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>
+                      <Link href="/teoria" className="hover:text-white transition-colors">
+                        Guia de RAG
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/normativa" className="hover:text-white transition-colors">
+                        Normativa IA
+                      </Link>
+                    </li>
+                    <li>
+                      <a href="/guia_completa_rag.ipynb" download className="hover:text-white transition-colors">
+                        Descargar Notebook
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/demstalferez/rag-builder"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition-colors"
+                      >
+                        GitHub
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Collaboration */}
+                <div>
+                  <h3 className="font-semibold text-white mb-3">Colaboracion</h3>
+                  <div className="flex items-center gap-4 mb-3">
+                    <Image
+                      src="/logoupgradehub.svg"
+                      alt="Upgrade Hub"
+                      width={100}
+                      height={24}
+                      className="h-6 w-auto invert opacity-70 hover:opacity-100 transition-opacity"
+                    />
+                    <Image
+                      src="/1-CSIC-Logotipo-COLOR-TRANSPARENTE.png"
+                      alt="CSIC"
+                      width={70}
+                      height={24}
+                      className="h-6 w-auto brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                  <p className="text-xs text-slate-500">
+                    Protocolo de actuacion 2025-2030 para impulsar el talento en competencias digitales.
+                  </p>
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row justify-between items-center">
-                <div className="text-sm text-center md:text-left">
-                  <p>2024 RAG Builder - Programa de Formacion en IA</p>
-                  <p className="text-xs text-slate-500 mt-1">Upgrade Hub & CSIC</p>
-                </div>
-                <div className="flex space-x-6 mt-4 md:mt-0">
-                  <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+
+              {/* Bottom bar */}
+              <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p className="text-xs text-slate-500">
+                  2025 RAG Builder. Proyecto Open Source bajo licencia MIT.
+                </p>
+                <div className="flex items-center gap-4 text-xs">
+                  <a
+                    href="https://github.com/demstalferez/rag-builder/blob/main/LICENSE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-500 hover:text-white transition-colors"
+                  >
                     MIT License
                   </a>
-                  <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                  <a
+                    href="https://github.com/demstalferez/rag-builder"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-500 hover:text-white transition-colors"
+                  >
                     Contribuir
                   </a>
                 </div>
