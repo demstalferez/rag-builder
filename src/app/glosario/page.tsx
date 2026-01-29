@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-type Category = 'all' | 'rag-core' | 'embeddings' | 'vector-db' | 'llm' | 'retrieval' | 'normativa';
+type Category = 'all' | 'rag-core' | 'embeddings' | 'vector-db' | 'llm' | 'retrieval' | 'normativa' | 'investigacion';
 
 interface GlossaryTerm {
   id: string;
@@ -20,6 +20,7 @@ const CATEGORIES: { id: Category; name: string; color: string; bgColor: string; 
   { id: 'vector-db', name: 'Vector DBs', color: 'text-green-700', bgColor: 'bg-green-50', borderColor: 'border-green-300' },
   { id: 'llm', name: 'LLMs', color: 'text-purple-700', bgColor: 'bg-purple-50', borderColor: 'border-purple-300' },
   { id: 'retrieval', name: 'Retrieval', color: 'text-cyan-700', bgColor: 'bg-cyan-50', borderColor: 'border-cyan-300' },
+  { id: 'investigacion', name: 'Investigación', color: 'text-pink-700', bgColor: 'bg-pink-50', borderColor: 'border-pink-300' },
   { id: 'normativa', name: 'Normativa', color: 'text-orange-700', bgColor: 'bg-orange-50', borderColor: 'border-orange-300' },
 ];
 
@@ -233,6 +234,57 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
     definition: 'Modelos de IA con código y pesos disponibles públicamente (Llama, Mistral). Permiten ejecución local para cumplir requisitos de privacidad y soberanía de datos.',
     category: 'normativa',
   },
+  // Investigación
+  {
+    id: 'revision-bibliografica',
+    term: 'Revisión Bibliográfica',
+    definition: 'Proceso sistemático de búsqueda, selección y síntesis de literatura científica sobre un tema. RAG puede asistir en la síntesis pero no reemplaza el análisis crítico del investigador.',
+    category: 'investigacion',
+  },
+  {
+    id: 'estado-del-arte',
+    term: 'Estado del Arte',
+    definition: 'Sección de un paper que resume el conocimiento actual sobre un tema. RAG es útil para generar borradores iniciales consultando múltiples papers indexados.',
+    category: 'investigacion',
+  },
+  {
+    id: 'alucinacion',
+    term: 'Alucinación',
+    definition: 'Cuando un LLM genera información que parece correcta pero es inventada. Crítico en investigación: siempre verificar datos, cifras y citas en los documentos originales.',
+    category: 'investigacion',
+  },
+  {
+    id: 'proveniencia',
+    term: 'Proveniencia/Trazabilidad',
+    definition: 'Capacidad de identificar qué documento fuente generó cada parte de una respuesta RAG. Esencial para citar correctamente y verificar información en contextos académicos.',
+    category: 'investigacion',
+  },
+  {
+    id: 'scibert',
+    term: 'SciBERT',
+    definition: 'Modelo de embeddings preentrenado en papers científicos. Mejor rendimiento que modelos genéricos para textos académicos y técnicos.',
+    category: 'investigacion',
+    link: 'https://github.com/allenai/scibert',
+  },
+  {
+    id: 'zotero',
+    term: 'Zotero',
+    definition: 'Gestor de referencias bibliográficas gratuito y open source. Permite exportar colecciones de papers que pueden indexarse en un sistema RAG.',
+    category: 'investigacion',
+    link: 'https://www.zotero.org/',
+  },
+  {
+    id: 'doi',
+    term: 'DOI (Digital Object Identifier)',
+    definition: 'Identificador único y permanente para documentos académicos. Útil como metadato en RAG para vincular respuestas con papers específicos.',
+    category: 'investigacion',
+  },
+  {
+    id: 'reproducibilidad',
+    term: 'Reproducibilidad',
+    definition: 'Capacidad de obtener los mismos resultados repitiendo un experimento o análisis. En RAG: documentar versiones de modelos, configuración y datos usados.',
+    category: 'investigacion',
+  },
 ];
 
 const CATEGORY_ICONS: Record<Exclude<Category, 'all'>, string> = {
@@ -241,6 +293,7 @@ const CATEGORY_ICONS: Record<Exclude<Category, 'all'>, string> = {
   'vector-db': 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4',
   'llm': 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
   'retrieval': 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
+  'investigacion': 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
   'normativa': 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
 };
 

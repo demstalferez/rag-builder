@@ -51,32 +51,37 @@ export default function RootLayout({
 
                 {/* Links */}
                 <div>
-                  <h3 className="font-semibold text-upgrade-yellow mb-3">Recursos</h3>
+                  <h3 className="font-semibold text-upgrade-yellow mb-3">Aprendizaje</h3>
                   <ul className="space-y-2 text-sm">
                     <li>
+                      <Link href="/tutoriales" className="text-gray-300 hover:text-upgrade-yellow transition-colors">
+                        Tutoriales
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/teoria" className="text-gray-300 hover:text-upgrade-yellow transition-colors">
-                        Guía de RAG
+                        Teoría RAG
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/glosario" className="text-gray-300 hover:text-upgrade-yellow transition-colors">
+                        Glosario
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/faq" className="text-gray-300 hover:text-upgrade-yellow transition-colors">
+                        FAQ
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/recursos" className="text-gray-300 hover:text-upgrade-yellow transition-colors">
+                        Recursos
                       </Link>
                     </li>
                     <li>
                       <Link href="/normativa" className="text-gray-300 hover:text-upgrade-yellow transition-colors">
                         Normativa IA
                       </Link>
-                    </li>
-                    <li>
-                      <a href="/guia_completa_rag.ipynb" download className="text-gray-300 hover:text-upgrade-yellow transition-colors">
-                        Descargar Notebook
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://github.com/demstalferez/rag-builder"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-300 hover:text-upgrade-yellow transition-colors"
-                      >
-                        GitHub
-                      </a>
                     </li>
                   </ul>
                 </div>

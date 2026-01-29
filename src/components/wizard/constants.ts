@@ -27,7 +27,9 @@ export const STEPS: Step[] = [
 ];
 
 export const USE_CASE_INFO: Record<UseCaseType, UseCaseInfo> = {
-  scientific: { name: 'Científico', description: 'Papers, investigación, documentos técnicos', icon: BookOpen },
+  papers: { name: 'Papers Científicos', description: 'Artículos académicos, revisión bibliográfica', icon: BookOpen },
+  thesis: { name: 'Tesis/Dissertación', description: 'Tu tesis y literatura relacionada', icon: FileText },
+  scientific: { name: 'Datos de Investigación', description: 'Datasets, resultados experimentales', icon: Database },
   legal: { name: 'Legal', description: 'Contratos, leyes, documentos legales', icon: Scale },
   code: { name: 'Código', description: 'Repositorios, documentación técnica, APIs', icon: Code },
   documentation: { name: 'Documentación', description: 'Manuales, guías, wikis', icon: FileText },
@@ -48,11 +50,11 @@ export const LLM_PROVIDERS: { id: LLMProvider; name: string; description: string
   { id: 'huggingface', name: 'HuggingFace', description: 'Acceso a miles de modelos', local: false },
 ];
 
-export const EMBEDDING_PROVIDERS: { id: EmbeddingProvider; name: string; description: string }[] = [
-  { id: 'sentence-transformers', name: 'Sentence Transformers', description: 'Locales, multilingües, gratuitos' },
+export const EMBEDDING_PROVIDERS: { id: EmbeddingProvider; name: string; description: string; badge?: string }[] = [
+  { id: 'sentence-transformers', name: 'Sentence Transformers', description: 'Locales, multilingües, gratuitos', badge: 'Recomendado' },
   { id: 'openai', name: 'OpenAI', description: 'text-embedding-3, alta calidad' },
   { id: 'ollama', name: 'Ollama', description: 'nomic-embed, local' },
-  { id: 'huggingface', name: 'HuggingFace', description: 'BGE, E5 y más' },
+  { id: 'huggingface', name: 'HuggingFace', description: 'BGE, E5, SciBERT para ciencia' },
 ];
 
 export const VECTOR_DATABASES: { id: VectorDBProvider; name: string; description: string; local: boolean }[] = [

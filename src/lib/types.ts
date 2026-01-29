@@ -4,7 +4,7 @@ export type LLMProvider = 'ollama' | 'openai' | 'anthropic' | 'huggingface' | 'l
 export type VectorDBProvider = 'chromadb' | 'faiss' | 'qdrant' | 'milvus' | 'pinecone' | 'pgvector';
 export type EmbeddingProvider = 'sentence-transformers' | 'openai' | 'huggingface' | 'ollama';
 export type InfrastructureType = 'local' | 'hybrid' | 'cloud';
-export type UseCaseType = 'scientific' | 'legal' | 'code' | 'documentation' | 'customer-support' | 'general';
+export type UseCaseType = 'scientific' | 'papers' | 'thesis' | 'legal' | 'code' | 'documentation' | 'customer-support' | 'general';
 export type ComplexityLevel = 'basic' | 'advanced' | 'enterprise';
 
 export interface LLMConfig {
@@ -191,8 +191,9 @@ export const EMBEDDING_MODELS: Record<EmbeddingProvider, string[]> = {
     'BAAI/bge-m3',
     'intfloat/multilingual-e5-large',
     'BAAI/bge-large-en-v1.5',
+    'allenai/scibert_scivocab_uncased',
   ],
   openai: ['text-embedding-3-small', 'text-embedding-3-large', 'text-embedding-ada-002'],
-  huggingface: ['BAAI/bge-m3', 'intfloat/e5-large-v2'],
+  huggingface: ['BAAI/bge-m3', 'intfloat/e5-large-v2', 'allenai/scibert_scivocab_uncased'],
   ollama: ['nomic-embed-text', 'mxbai-embed-large'],
 };
