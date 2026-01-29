@@ -140,12 +140,12 @@ export default function ConfigWizard() {
       <div className="mt-4 flex items-center justify-between text-sm">
         <div className="flex items-center gap-2 text-slate-500 ">
           <Save className="w-4 h-4" aria-hidden="true" />
-          <span>Progreso guardado automaticamente</span>
+          <span>Progreso guardado automáticamente</span>
         </div>
         <button
           onClick={() => setShowResetConfirm(true)}
           className="flex items-center gap-1 text-slate-500  hover:text-red-600 transition-colors"
-          aria-label="Reiniciar configuracion"
+          aria-label="Reiniciar configuración"
         >
           <RotateCcw className="w-4 h-4" aria-hidden="true" />
           <span>Reiniciar</span>
@@ -162,10 +162,10 @@ export default function ConfigWizard() {
         >
           <div className="bg-white  rounded-xl p-6 max-w-md mx-4 shadow-2xl">
             <h3 id="reset-dialog-title" className="text-lg font-semibold text-slate-900  mb-2">
-              Reiniciar configuracion?
+              ¿Reiniciar configuración?
             </h3>
             <p className="text-slate-600  mb-6">
-              Esto eliminara toda tu configuracion guardada y volvera a los valores por defecto.
+              Esto eliminará toda tu configuración guardada y volverá a los valores por defecto.
             </p>
             <div className="flex gap-3 justify-end">
               <button

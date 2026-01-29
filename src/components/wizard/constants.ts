@@ -22,22 +22,22 @@ export const STEPS: Step[] = [
   { id: 3, name: 'LLM', icon: Brain },
   { id: 4, name: 'Embeddings', icon: Sparkles },
   { id: 5, name: 'Base de Datos', icon: Database },
-  { id: 6, name: 'Configuracion', icon: Settings },
+  { id: 6, name: 'Configuración', icon: Settings },
   { id: 7, name: 'Descargar', icon: Download },
 ];
 
 export const USE_CASE_INFO: Record<UseCaseType, UseCaseInfo> = {
-  scientific: { name: 'Cientifico', description: 'Papers, investigacion, documentos tecnicos', icon: BookOpen },
+  scientific: { name: 'Científico', description: 'Papers, investigación, documentos técnicos', icon: BookOpen },
   legal: { name: 'Legal', description: 'Contratos, leyes, documentos legales', icon: Scale },
-  code: { name: 'Codigo', description: 'Repositorios, documentacion tecnica, APIs', icon: Code },
-  documentation: { name: 'Documentacion', description: 'Manuales, guias, wikis', icon: FileText },
-  'customer-support': { name: 'Soporte', description: 'FAQs, tickets, atencion al cliente', icon: HeadphonesIcon },
-  general: { name: 'General', description: 'Uso general, sin especializacion', icon: Layers },
+  code: { name: 'Código', description: 'Repositorios, documentación técnica, APIs', icon: Code },
+  documentation: { name: 'Documentación', description: 'Manuales, guías, wikis', icon: FileText },
+  'customer-support': { name: 'Soporte', description: 'FAQs, tickets, atención al cliente', icon: HeadphonesIcon },
+  general: { name: 'General', description: 'Uso general, sin especialización', icon: Layers },
 };
 
 export const INFRASTRUCTURE_INFO: Record<InfrastructureType, InfrastructureInfo> = {
-  local: { name: 'Local', description: 'Todo en tu maquina, sin APIs externas', icon: Server },
-  hybrid: { name: 'Hibrido', description: 'Modelos locales con servicios cloud', icon: Layers },
+  local: { name: 'Local', description: 'Todo en tu máquina, sin APIs externas', icon: Server },
+  hybrid: { name: 'Híbrido', description: 'Modelos locales con servicios cloud', icon: Layers },
   cloud: { name: 'Cloud', description: 'APIs y servicios cloud completos', icon: Cloud },
 };
 
@@ -49,16 +49,16 @@ export const LLM_PROVIDERS: { id: LLMProvider; name: string; description: string
 ];
 
 export const EMBEDDING_PROVIDERS: { id: EmbeddingProvider; name: string; description: string }[] = [
-  { id: 'sentence-transformers', name: 'Sentence Transformers', description: 'Locales, multilingues, gratuitos' },
+  { id: 'sentence-transformers', name: 'Sentence Transformers', description: 'Locales, multilingües, gratuitos' },
   { id: 'openai', name: 'OpenAI', description: 'text-embedding-3, alta calidad' },
   { id: 'ollama', name: 'Ollama', description: 'nomic-embed, local' },
-  { id: 'huggingface', name: 'HuggingFace', description: 'BGE, E5 y mas' },
+  { id: 'huggingface', name: 'HuggingFace', description: 'BGE, E5 y más' },
 ];
 
 export const VECTOR_DATABASES: { id: VectorDBProvider; name: string; description: string; local: boolean }[] = [
   { id: 'chromadb', name: 'ChromaDB', description: 'Simple, embebido, perfecto para empezar', local: true },
-  { id: 'faiss', name: 'FAISS', description: 'Meta AI, muy rapido, local', local: true },
-  { id: 'qdrant', name: 'Qdrant', description: 'Produccion, filtros avanzados', local: true },
+  { id: 'faiss', name: 'FAISS', description: 'Meta AI, muy rápido, local', local: true },
+  { id: 'qdrant', name: 'Qdrant', description: 'Producción, filtros avanzados', local: true },
   { id: 'milvus', name: 'Milvus', description: 'Escalable, cloud-native', local: false },
   { id: 'pinecone', name: 'Pinecone', description: 'Serverless, managed', local: false },
   { id: 'pgvector', name: 'pgvector', description: 'PostgreSQL con vectores', local: true },

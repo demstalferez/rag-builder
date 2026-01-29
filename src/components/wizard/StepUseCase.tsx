@@ -10,10 +10,10 @@ export default function StepUseCase({ config, onUpdate }: StepProps) {
   return (
     <div>
       <h2 className="text-2xl font-bold text-slate-900  mb-2">
-        Cual es tu caso de uso?
+        ¿Cuál es tu caso de uso?
       </h2>
       <p className="text-slate-600  mb-8">
-        Esto nos ayuda a optimizar la configuracion para tu tipo de documentos
+        Esto nos ayuda a optimizar la configuración para tu tipo de documentos
       </p>
 
       <div className="grid md:grid-cols-3 gap-4 mb-8">

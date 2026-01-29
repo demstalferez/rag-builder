@@ -8,21 +8,21 @@ import SelectionCard from './SelectionCard';
 const COMPLEXITY_LEVELS: { id: ComplexityLevel; name: string; description: string; features: string[] }[] = [
   {
     id: 'basic',
-    name: 'Basico',
+    name: 'Básico',
     description: 'Perfecto para empezar y aprender RAG',
     features: ['ChromaDB local', 'Ollama con Llama 3.1', 'Chunking recursivo', 'Sin reranking'],
   },
   {
     id: 'advanced',
     name: 'Avanzado',
-    description: 'Para proyectos de produccion',
-    features: ['Qdrant', 'Busqueda hibrida', 'Reranking con Cross-Encoder', 'API FastAPI incluida'],
+    description: 'Para proyectos de producción',
+    features: ['Qdrant', 'Búsqueda híbrida', 'Reranking con Cross-Encoder', 'API FastAPI incluida'],
   },
   {
     id: 'enterprise',
     name: 'Enterprise',
-    description: 'Maxima calidad y escalabilidad',
-    features: ['Chunking semantico', 'Modelos grandes', 'UI incluida', 'Tests completos'],
+    description: 'Máxima calidad y escalabilidad',
+    features: ['Chunking semántico', 'Modelos grandes', 'UI incluida', 'Tests completos'],
   },
 ];
 
@@ -33,7 +33,7 @@ export default function StepComplexity({ config, onSelect }: StepComplexityProps
         Elige el nivel de complejidad
       </h2>
       <p className="text-slate-600  mb-8">
-        Selecciona una configuracion base que se ajuste a tus necesidades
+        Selecciona una configuración base que se ajuste a tus necesidades
       </p>
 
       <div className="grid md:grid-cols-3 gap-6">

@@ -42,13 +42,13 @@ export default function TeoriaPage() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <h1 className="text-3xl md:text-4xl font-bold text-slate-900  mb-2">
-              Guia Completa de{' '}
+              Guía Completa de{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">
                 RAG
               </span>
             </h1>
             <p className="text-slate-600 ">
-              Teoria, conceptos y ejemplos practicos de Retrieval-Augmented Generation
+              Teoría, conceptos y ejemplos prácticos de Retrieval-Augmented Generation
             </p>
           </div>
 
@@ -76,13 +76,13 @@ export default function TeoriaPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-2 text-sm">
             <a href="#section-1" className="text-slate-600  hover:text-primary-600 py-1">
-              1. Fundamentos Teoricos de RAG
+              1. Fundamentos Teóricos de RAG
             </a>
             <a href="#section-2" className="text-slate-600  hover:text-primary-600 py-1">
-              2. Embeddings: El Corazon Semantico
+              2. Embeddings: El Corazón Semántico
             </a>
             <a href="#section-3" className="text-slate-600  hover:text-primary-600 py-1">
-              3. Chunking: Division Inteligente
+              3. Chunking: División Inteligente
             </a>
             <a href="#section-4" className="text-slate-600  hover:text-primary-600 py-1">
               4. Vector Stores: Almacenamiento
@@ -91,10 +91,10 @@ export default function TeoriaPage() {
               5. Pipeline RAG Completo
             </a>
             <a href="#section-6" className="text-slate-600  hover:text-primary-600 py-1">
-              6. Tecnicas Avanzadas de Retrieval
+              6. Técnicas Avanzadas de Retrieval
             </a>
             <a href="#section-7" className="text-slate-600  hover:text-primary-600 py-1">
-              7. Evaluacion y Metricas
+              7. Evaluación y Métricas
             </a>
             <a href="#section-8" className="text-slate-600  hover:text-primary-600 py-1">
               8. Prompt Engineering para RAG
@@ -103,7 +103,7 @@ export default function TeoriaPage() {
               9. Soluciones Open Source
             </a>
             <a href="#section-10" className="text-slate-600  hover:text-primary-600 py-1">
-              10. Despliegue en Produccion
+              10. Despliegue en Producción
             </a>
           </div>
         </div>

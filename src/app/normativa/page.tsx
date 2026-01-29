@@ -20,13 +20,13 @@ export default function NormativaPage() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <h1 className="text-3xl md:text-4xl font-bold text-slate-900  mb-2">
-              Regulacion Europea:{' '}
+              Regulación Europea:{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-500">
                 AI Act y RGPD
               </span>
             </h1>
             <p className="text-slate-600 ">
-              Marco normativo para el uso de IA en investigacion cientifica
+              Marco normativo para el uso de IA en investigación científica
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function NormativaPage() {
           <div className="relative">
             <div className="flex items-center gap-2 mb-4">
               <span className="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full border border-amber-500/30">
-                Colaboracion Institucional
+                Colaboración Institucional
               </span>
               <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/30">
                 Protocolo 2025-2030
@@ -60,9 +60,9 @@ export default function NormativaPage() {
             </h2>
 
             <p className="text-slate-300 mb-6 max-w-3xl">
-              Esta herramienta surge del <strong className="text-white">Protocolo General de Actuacion</strong> firmado entre el
-              Consejo Superior de Investigaciones Cientificas (CSIC) y Upgrade Hub, con el objetivo de capacitar a
-              investigadores y tecnicos en competencias digitales avanzadas, incluyendo IA, ciencia de datos y tecnologias RAG.
+              Esta herramienta surge del <strong className="text-white">Protocolo General de Actuación</strong> firmado entre el
+              Consejo Superior de Investigaciones Científicas (CSIC) y Upgrade Hub, con el objetivo de capacitar a
+              investigadores y técnicos en competencias digitales avanzadas, incluyendo IA, ciencia de datos y tecnologías RAG.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-6">
@@ -104,11 +104,11 @@ export default function NormativaPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-white">5 anos</p>
+                    <p className="text-2xl font-bold text-white">5 años</p>
                     <p className="text-xs text-slate-400">Vigencia Protocolo</p>
                   </div>
                 </div>
-                <p className="text-sm text-slate-400">Formacion continua hasta 2030</p>
+                <p className="text-sm text-slate-400">Formación continua hasta 2030</p>
               </div>
             </div>
 
@@ -118,12 +118,12 @@ export default function NormativaPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <div>
-                  <h4 className="font-semibold text-amber-400 mb-1">¿Por que esta herramienta?</h4>
+                  <h4 className="font-semibold text-amber-400 mb-1">¿Por qué esta herramienta?</h4>
                   <p className="text-sm text-slate-300">
-                    RAG Builder nace para que investigadores y tecnicos del CSIC puedan crear sus propias herramientas de IA
-                    de forma autonoma, cumpliendo con la normativa europea y aprovechando modelos open source.
+                    RAG Builder nace para que investigadores y técnicos del CSIC puedan crear sus propias herramientas de IA
+                    de forma autónoma, cumpliendo con la normativa europea y aprovechando modelos open source.
                     Forma parte del contenido formativo del Bootcamp Data Analytics & IA, donde los alumnos aprenden
-                    tecnicas como <strong className="text-white">ETL, RAG, Machine Learning y LLMs</strong>.
+                    técnicas como <strong className="text-white">ETL, RAG, Machine Learning y LLMs</strong>.
                   </p>
                 </div>
               </div>
@@ -173,19 +173,19 @@ export default function NormativaPage() {
 
           <div className="prose  max-w-none">
             <p className="text-slate-600 ">
-              El CSIC, como mayor organismo publico de investigacion de Espana, esta en una posicion unica para
-              liderar la adopcion responsable de la IA en el ambito cientifico. En colaboracion con <strong>Upgrade Hub</strong>,
-              estamos formando a investigadores y tecnicos en el uso de tecnologias como RAG, LLMs y ciencia de datos.
+              El CSIC, como mayor organismo público de investigación de España, está en una posición única para
+              liderar la adopción responsable de la IA en el ámbito científico. En colaboración con <strong>Upgrade Hub</strong>,
+              estamos formando a investigadores y técnicos en el uso de tecnologías como RAG, LLMs y ciencia de datos.
             </p>
 
             <div className="bg-slate-50  rounded-lg p-4 my-4">
               <p className="text-sm text-slate-600  italic">
-                "El 89% de las organizaciones cientificas europeas no estan completamente preparadas para cumplir con el AI Act."
+                "El 89% de las organizaciones científicas europeas no están completamente preparadas para cumplir con el AI Act."
               </p>
             </div>
 
             <p className="text-slate-600 ">
-              Europa se ha posicionado como lider mundial en regulacion tecnologica. Comprender este marco normativo es crucial para:
+              Europa se ha posicionado como líder mundial en regulación tecnológica. Comprender este marco normativo es crucial para:
             </p>
 
             <ul className="mt-4 space-y-2 text-slate-600 ">
@@ -193,13 +193,13 @@ export default function NormativaPage() {
                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>Equilibrar innovacion cientifica con proteccion de derechos fundamentales</span>
+                <span>Equilibrar innovación científica con protección de derechos fundamentales</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>Gestionar adecuadamente datos personales y sensibles en investigacion</span>
+                <span>Gestionar adecuadamente datos personales y sensibles en investigación</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -211,7 +211,7 @@ export default function NormativaPage() {
                 <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>Mantener la soberania sobre los datos usando modelos open source locales</span>
+                <span>Mantener la soberanía sobre los datos usando modelos open source locales</span>
               </li>
             </ul>
 
@@ -246,11 +246,11 @@ export default function NormativaPage() {
           <div className="space-y-6">
             {/* Vision General */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-900  mb-3">Vision General</h3>
+              <h3 className="text-lg font-semibold text-slate-900  mb-3">Visión General</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-slate-50  rounded-lg p-4">
                   <p className="text-sm text-slate-600 ">
-                    <strong className="text-slate-900 ">Entrada en vigor:</strong> Agosto 2024, con implementacion gradual hasta 2027
+                    <strong className="text-slate-900 ">Entrada en vigor:</strong> Agosto 2024, con implementación gradual hasta 2027
                   </p>
                 </div>
                 <div className="bg-slate-50  rounded-lg p-4">
@@ -260,41 +260,41 @@ export default function NormativaPage() {
                 </div>
               </div>
               <p className="text-slate-600  mt-4">
-                El AI Act utiliza un <strong>enfoque basado en riesgos</strong>: no prohibe la IA, sino que la regula segun su potencial impacto en los derechos fundamentales.
+                El AI Act utiliza un <strong>enfoque basado en riesgos</strong>: no prohibe la IA, sino que la regula según su potencial impacto en los derechos fundamentales.
               </p>
             </div>
 
             {/* Clasificacion por Riesgo */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-900  mb-3">Clasificacion por Niveles de Riesgo</h3>
+              <h3 className="text-lg font-semibold text-slate-900  mb-3">Clasificación por Niveles de Riesgo</h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-slate-100 ">
                       <th className="px-4 py-3 text-left font-semibold text-slate-900  rounded-tl-lg">Nivel</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Descripcion</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900  rounded-tr-lg">Ejemplos en Investigacion</th>
+                      <th className="px-4 py-3 text-left font-semibold text-slate-900 ">Descripción</th>
+                      <th className="px-4 py-3 text-left font-semibold text-slate-900  rounded-tr-lg">Ejemplos en Investigación</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200 ">
                     <tr className="bg-red-50 ">
                       <td className="px-4 py-3 font-medium text-red-700 ">Inaceptable</td>
                       <td className="px-4 py-3 text-slate-600 ">Prohibido en la UE</td>
-                      <td className="px-4 py-3 text-slate-600 ">Puntuacion social, manipulacion subliminal, identificacion biometrica masiva</td>
+                      <td className="px-4 py-3 text-slate-600 ">Puntuación social, manipulación subliminal, identificación biométrica masiva</td>
                     </tr>
                     <tr className="bg-orange-50 ">
                       <td className="px-4 py-3 font-medium text-orange-700 ">Alto Riesgo</td>
                       <td className="px-4 py-3 text-slate-600 ">Requisitos estrictos de conformidad</td>
-                      <td className="px-4 py-3 text-slate-600 ">IA diagnostica medica, seleccion de candidatos, analisis de datos biometricos</td>
+                      <td className="px-4 py-3 text-slate-600 ">IA diagnóstica médica, selección de candidatos, análisis de datos biométricos</td>
                     </tr>
                     <tr className="bg-yellow-50 ">
                       <td className="px-4 py-3 font-medium text-yellow-700 ">Riesgo Limitado</td>
                       <td className="px-4 py-3 text-slate-600 ">Obligaciones de transparencia</td>
-                      <td className="px-4 py-3 text-slate-600 ">Chatbots, sistemas de recomendacion, generacion de contenido</td>
+                      <td className="px-4 py-3 text-slate-600 ">Chatbots, sistemas de recomendación, generación de contenido</td>
                     </tr>
                     <tr className="bg-green-50 ">
-                      <td className="px-4 py-3 font-medium text-green-700 ">Riesgo Minimo</td>
-                      <td className="px-4 py-3 text-slate-600 ">Sin restricciones especificas</td>
+                      <td className="px-4 py-3 font-medium text-green-700 ">Riesgo Mínimo</td>
+                      <td className="px-4 py-3 text-slate-600 ">Sin restricciones específicas</td>
                       <td className="px-4 py-3 text-slate-600 ">Filtros de spam, videojuegos, herramientas de productividad</td>
                     </tr>
                   </tbody>
@@ -307,13 +307,13 @@ export default function NormativaPage() {
               <h3 className="text-lg font-semibold text-slate-900  mb-3">Obligaciones para Sistemas de Alto Riesgo</h3>
               <div className="grid md:grid-cols-2 gap-3">
                 {[
-                  { icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z", text: "Sistema de gestion de riesgos documentado" },
+                  { icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z", text: "Sistema de gestión de riesgos documentado" },
                   { icon: "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4", text: "Gobernanza de datos: calidad, representatividad, trazabilidad" },
-                  { icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z", text: "Documentacion tecnica completa" },
+                  { icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z", text: "Documentación técnica completa" },
                   { icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2", text: "Registro de actividades (logging)" },
-                  { icon: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z", text: "Transparencia y provision de informacion a usuarios" },
-                  { icon: "M15 12a3 3 0 11-6 0 3 3 0 016 0z", text: "Supervision humana efectiva" },
-                  { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", text: "Precision, robustez y ciberseguridad" },
+                  { icon: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z", text: "Transparencia y provisión de información a usuarios" },
+                  { icon: "M15 12a3 3 0 11-6 0 3 3 0 016 0z", text: "Supervisión humana efectiva" },
+                  { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", text: "Precisión, robustez y ciberseguridad" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center bg-slate-50  rounded-lg p-3">
                     <svg className="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -331,12 +331,12 @@ export default function NormativaPage() {
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                Exenciones para Investigacion Cientifica (Art. 2.6)
+                Exenciones para Investigación Científica (Art. 2.6)
               </h4>
               <ul className="text-sm text-blue-700  space-y-1">
-                <li>• Exencion para IA desarrollada <strong>exclusivamente</strong> con fines de investigacion cientifica</li>
-                <li>• <strong>IMPORTANTE:</strong> La exencion NO aplica si el sistema se comercializa o se pone a disposicion de terceros</li>
-                <li>• Los datos de entrenamiento SI deben cumplir con RGPD aunque sea investigacion</li>
+                <li>• Exención para IA desarrollada <strong>exclusivamente</strong> con fines de investigación científica</li>
+                <li>• <strong>IMPORTANTE:</strong> La exención NO aplica si el sistema se comercializa o se pone a disposición de terceros</li>
+                <li>• Los datos de entrenamiento SÍ deben cumplir con RGPD aunque sea investigación</li>
               </ul>
             </div>
           </div>
@@ -346,7 +346,7 @@ export default function NormativaPage() {
         <section id="rgpd" className="bg-white  rounded-xl border border-slate-200  p-6">
           <h2 className="text-2xl font-bold text-slate-900  mb-4 flex items-center">
             <span className="w-8 h-8 bg-amber-100  rounded-lg flex items-center justify-center mr-3 text-amber-600  text-sm font-bold">3</span>
-            RGPD y su Aplicacion en Proyectos de IA
+            RGPD y su Aplicación en Proyectos de IA
           </h2>
 
           <div className="space-y-6">
@@ -355,10 +355,10 @@ export default function NormativaPage() {
               <h3 className="text-lg font-semibold text-slate-900  mb-3">Principios Fundamentales del RGPD en IA</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  { title: "Minimizacion de datos", desc: "Usar solo los datos estrictamente necesarios" },
-                  { title: "Limitacion de la finalidad", desc: "Los datos recogidos para un fin no pueden usarse para otro incompatible" },
-                  { title: "Exactitud", desc: "Obligacion de mantener datos actualizados y corregir inexactitudes" },
-                  { title: "Limitacion del plazo", desc: "No mantener datos mas tiempo del necesario" },
+                  { title: "Minimización de datos", desc: "Usar solo los datos estrictamente necesarios" },
+                  { title: "Limitación de la finalidad", desc: "Los datos recogidos para un fin no pueden usarse para otro incompatible" },
+                  { title: "Exactitud", desc: "Obligación de mantener datos actualizados y corregir inexactitudes" },
+                  { title: "Limitación del plazo", desc: "No mantener datos más tiempo del necesario" },
                   { title: "Integridad y confidencialidad", desc: "Seguridad adecuada de los datos" },
                   { title: "Responsabilidad proactiva", desc: "Demostrar cumplimiento activamente" },
                 ].map((item, i) => (
@@ -375,16 +375,16 @@ export default function NormativaPage() {
               <h3 className="text-lg font-semibold text-slate-900  mb-3">Bases Legales para el Tratamiento</h3>
               <div className="space-y-3">
                 <div className="border-l-4 border-amber-500 pl-4 py-2">
-                  <h4 className="font-medium text-slate-900 ">Consentimiento explicito</h4>
+                  <h4 className="font-medium text-slate-900 ">Consentimiento explícito</h4>
                   <p className="text-sm text-slate-600 ">Especialmente relevante para datos sensibles</p>
                 </div>
                 <div className="border-l-4 border-amber-500 pl-4 py-2">
-                  <h4 className="font-medium text-slate-900 ">Interes legitimo</h4>
-                  <p className="text-sm text-slate-600 ">Puede aplicar en investigacion, pero requiere ponderacion</p>
+                  <h4 className="font-medium text-slate-900 ">Interés legítimo</h4>
+                  <p className="text-sm text-slate-600 ">Puede aplicar en investigación, pero requiere ponderación</p>
                 </div>
                 <div className="border-l-4 border-amber-500 pl-4 py-2">
-                  <h4 className="font-medium text-slate-900 ">Interes publico en investigacion cientifica (Art. 89)</h4>
-                  <p className="text-sm text-slate-600 ">Base legal especifica con garantias adicionales</p>
+                  <h4 className="font-medium text-slate-900 ">Interés público en investigación científica (Art. 89)</h4>
+                  <p className="text-sm text-slate-600 ">Base legal específica con garantías adicionales</p>
                 </div>
               </div>
             </div>
@@ -396,8 +396,8 @@ export default function NormativaPage() {
                 <div className="flex items-start">
                   <span className="inline-flex items-center justify-center w-6 h-6 bg-amber-100  text-amber-700  text-xs font-bold rounded mr-3 flex-shrink-0">22</span>
                   <div>
-                    <h4 className="font-medium text-slate-900  text-sm">Articulo 22</h4>
-                    <p className="text-xs text-slate-600 ">Derecho a no ser objeto de decisiones automatizadas con efectos juridicos significativos</p>
+                    <h4 className="font-medium text-slate-900  text-sm">Artículo 22</h4>
+                    <p className="text-xs text-slate-600 ">Derecho a no ser objeto de decisiones automatizadas con efectos jurídicos significativos</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -407,7 +407,7 @@ export default function NormativaPage() {
                   </svg>
                   <div>
                     <h4 className="font-medium text-slate-900  text-sm">Derecho de acceso</h4>
-                    <p className="text-xs text-slate-600 ">Incluye la logica aplicada en decisiones automatizadas</p>
+                    <p className="text-xs text-slate-600 ">Incluye la lógica aplicada en decisiones automatizadas</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -415,7 +415,7 @@ export default function NormativaPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                   </svg>
                   <div>
-                    <h4 className="font-medium text-slate-900  text-sm">Derecho de rectificacion y supresion</h4>
+                    <h4 className="font-medium text-slate-900  text-sm">Derecho de rectificación y supresión</h4>
                     <p className="text-xs text-slate-600 ">Impacto en modelos ya entrenados</p>
                   </div>
                 </div>
@@ -433,21 +433,21 @@ export default function NormativaPage() {
 
             {/* EIPD */}
             <div className="bg-purple-50  border border-purple-200  rounded-lg p-4">
-              <h4 className="font-semibold text-purple-800  mb-2">Evaluacion de Impacto (EIPD/DPIA)</h4>
+              <h4 className="font-semibold text-purple-800  mb-2">Evaluación de Impacto (EIPD/DPIA)</h4>
               <p className="text-sm text-purple-700  mb-3">
-                <strong>Obligatoria</strong> cuando el tratamiento puede entranar alto riesgo para los derechos y libertades de las personas.
+                <strong>Obligatoria</strong> cuando el tratamiento puede entrañar alto riesgo para los derechos y libertades de las personas.
               </p>
               <div className="text-sm text-purple-700 ">
-                <p className="font-medium mb-1">Contenido minimo:</p>
+                <p className="font-medium mb-1">Contenido mínimo:</p>
                 <ul className="list-disc list-inside space-y-1">
-                  <li>Descripcion sistematica del tratamiento</li>
-                  <li>Evaluacion de necesidad y proporcionalidad</li>
+                  <li>Descripción sistemática del tratamiento</li>
+                  <li>Evaluación de necesidad y proporcionalidad</li>
                   <li>Riesgos identificados para derechos y libertades</li>
-                  <li>Medidas de mitigacion previstas</li>
+                  <li>Medidas de mitigación previstas</li>
                 </ul>
               </div>
               <p className="text-sm text-purple-800  font-medium mt-3">
-                Recomendacion: Realizar EIPD ANTES de iniciar cualquier proyecto de IA con datos personales
+                Recomendación: Realizar EIPD ANTES de iniciar cualquier proyecto de IA con datos personales
               </p>
             </div>
           </div>
@@ -466,13 +466,13 @@ export default function NormativaPage() {
 
           <div className="space-y-3">
             {[
-              "Clasificar el sistema segun nivel de riesgo del AI Act",
+              "Clasificar el sistema según nivel de riesgo del AI Act",
               "Identificar la base legal para el tratamiento de datos",
               "Realizar EIPD si corresponde",
-              "Documentar todas las decisiones de diseno",
-              "Establecer procedimientos de supervision humana",
-              "Implementar medidas de seguridad tecnicas y organizativas",
-              "Definir periodo de retencion de datos",
+              "Documentar todas las decisiones de diseño",
+              "Establecer procedimientos de supervisión humana",
+              "Implementar medidas de seguridad técnicas y organizativas",
+              "Definir período de retención de datos",
               "Establecer mecanismos para ejercicio de derechos",
             ].map((item, i) => (
               <label key={i} className="flex items-center bg-slate-50  rounded-lg p-4 cursor-pointer hover:bg-slate-100 transition-colors">
@@ -492,7 +492,7 @@ export default function NormativaPage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-semibold text-slate-900  mb-3">Documentacion Oficial</h3>
+              <h3 className="font-semibold text-slate-900  mb-3">Documentación Oficial</h3>
               <ul className="space-y-2">
                 <li>
                   <a href="https://eur-lex.europa.eu" target="_blank" rel="noopener noreferrer" className="text-amber-600  hover:underline text-sm flex items-center">
@@ -515,7 +515,7 @@ export default function NormativaPage() {
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
-                    Guia AEPD sobre IA
+                    Guía AEPD sobre IA
                   </a>
                 </li>
               </ul>

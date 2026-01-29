@@ -53,10 +53,10 @@ export default function Home() {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-upgrade-black group-hover:text-upgrade-blue transition-colors">
-                  Guia Completa de RAG
+                  Guía Completa de RAG
                 </h3>
                 <p className="text-sm text-gray-700 mt-1">
-                  Teoria, embeddings, chunking, vector stores y ejemplos practicos con codigo.
+                  Teoría, embeddings, chunking, vector stores y ejemplos prácticos con código.
                 </p>
                 <div className="flex items-center gap-3 mt-2">
                   <span className="text-xs text-gray-500">10 secciones</span>
@@ -85,7 +85,7 @@ export default function Home() {
                   Normativa: AI Act y RGPD
                 </h3>
                 <p className="text-sm text-gray-700 mt-1">
-                  Marco regulatorio europeo, cumplimiento y buenas practicas para investigacion.
+                  Marco regulatorio europeo, cumplimiento y buenas prácticas para investigación.
                 </p>
                 <div className="flex items-center gap-3 mt-2">
                   <span className="text-xs text-upgrade-black font-medium">CSIC + Upgrade Hub</span>
@@ -109,7 +109,7 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h3 className="font-medium text-upgrade-black mb-1">Configuracion Rapida</h3>
+            <h3 className="font-medium text-upgrade-black mb-1">Configuración Rápida</h3>
             <p className="text-sm text-gray-700">
               Proyecto RAG completo en menos de 5 minutos.
             </p>
@@ -124,7 +124,7 @@ export default function Home() {
             </div>
             <h3 className="font-medium text-upgrade-black mb-1">Totalmente Configurable</h3>
             <p className="text-sm text-gray-700">
-              Multiples LLMs, embeddings y vector stores.
+              Múltiples LLMs, embeddings y vector stores.
             </p>
           </div>
 

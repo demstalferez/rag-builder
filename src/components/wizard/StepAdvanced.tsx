@@ -7,10 +7,10 @@ export default function StepAdvanced({ config, onUpdate }: StepProps) {
   return (
     <div>
       <h2 className="text-2xl font-bold text-slate-900  mb-2">
-        Configuracion Avanzada
+        Configuración Avanzada
       </h2>
       <p className="text-slate-600  mb-8">
-        Ajusta los parametros de chunking y retrieval
+        Ajusta los parámetros de chunking y retrieval
       </p>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -31,21 +31,21 @@ export default function StepAdvanced({ config, onUpdate }: StepProps) {
               className="w-full px-4 py-3 rounded-lg border border-slate-300  bg-white  text-slate-900  focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             >
               <option value="recursive">Recursivo</option>
-              <option value="fixed">Tamano fijo</option>
-              <option value="semantic">Semantico</option>
+              <option value="fixed">Tamaño fijo</option>
+              <option value="semantic">Semántico</option>
               <option value="markdown">Markdown</option>
             </select>
             <p className="mt-1 text-xs text-slate-500 ">
-              {config.chunking.strategy === 'recursive' && 'Divide recursivamente usando separadores jerarquicos'}
-              {config.chunking.strategy === 'fixed' && 'Divide en chunks de tamano fijo'}
-              {config.chunking.strategy === 'semantic' && 'Agrupa contenido semanticamente relacionado'}
+              {config.chunking.strategy === 'recursive' && 'Divide recursivamente usando separadores jerárquicos'}
+              {config.chunking.strategy === 'fixed' && 'Divide en chunks de tamaño fijo'}
+              {config.chunking.strategy === 'semantic' && 'Agrupa contenido semánticamente relacionado'}
               {config.chunking.strategy === 'markdown' && 'Optimizado para documentos Markdown'}
             </p>
           </div>
 
           <div>
             <label htmlFor="chunk-size" className="block text-sm font-medium text-slate-700  mb-2">
-              Tamano de Chunk: {config.chunking.chunkSize} caracteres
+              Tamaño de Chunk: {config.chunking.chunkSize} caracteres
             </label>
             <input
               id="chunk-size"
@@ -121,7 +121,7 @@ export default function StepAdvanced({ config, onUpdate }: StepProps) {
 
           <div className="flex items-center justify-between p-4 bg-slate-50  rounded-lg">
             <div>
-              <p className="font-medium text-slate-900 ">Busqueda Hibrida</p>
+              <p className="font-medium text-slate-900 ">Búsqueda Híbrida</p>
               <p className="text-sm text-slate-600 ">Combina vectorial + BM25</p>
             </div>
             <label className="relative inline-flex items-center cursor-pointer">
@@ -140,7 +140,7 @@ export default function StepAdvanced({ config, onUpdate }: StepProps) {
           <div className="flex items-center justify-between p-4 bg-slate-50  rounded-lg">
             <div>
               <p className="font-medium text-slate-900 ">Reranking</p>
-              <p className="text-sm text-slate-600 ">Cross-Encoder para mejor precision</p>
+              <p className="text-sm text-slate-600 ">Cross-Encoder para mejor precisión</p>
             </div>
             <label className="relative inline-flex items-center cursor-pointer">
               <input
@@ -158,7 +158,7 @@ export default function StepAdvanced({ config, onUpdate }: StepProps) {
           {config.retrieval.useHybridSearch && (
             <div>
               <label htmlFor="hybrid-alpha" className="block text-sm font-medium text-slate-700  mb-2">
-                Alpha hibrido: {config.retrieval.hybridAlpha ?? 0.5}
+                Alpha híbrido: {config.retrieval.hybridAlpha ?? 0.5}
               </label>
               <input
                 id="hybrid-alpha"

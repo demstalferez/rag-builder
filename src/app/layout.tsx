@@ -6,7 +6,7 @@ import Header from '@/components/Header'
 
 export const metadata: Metadata = {
   title: 'RAG Builder - Generador de Proyectos RAG | Upgrade Hub & CSIC',
-  description: 'Crea proyectos RAG personalizados con configuracion visual. Elige tu base de datos vectorial, modelo de lenguaje, y descarga un proyecto listo para usar. Programa de formacion Upgrade Hub y CSIC.',
+  description: 'Crea proyectos RAG personalizados con configuración visual. Elige tu base de datos vectorial, modelo de lenguaje, y descarga un proyecto listo para usar. Programa de formación Upgrade Hub y CSIC.',
   keywords: ['RAG', 'Retrieval-Augmented Generation', 'LLM', 'Vector Database', 'AI', 'Machine Learning', 'Upgrade Hub', 'CSIC'],
 }
 
@@ -45,7 +45,7 @@ export default function RootLayout({
                     <span className="font-semibold text-upgrade-yellow">RAG Builder</span>
                   </div>
                   <p className="text-sm text-gray-400">
-                    Generador visual de proyectos RAG. Parte del programa de formacion en IA del CSIC.
+                    Generador visual de proyectos RAG. Parte del programa de formación en IA del CSIC.
                   </p>
                 </div>
 
@@ -55,7 +55,7 @@ export default function RootLayout({
                   <ul className="space-y-2 text-sm">
                     <li>
                       <Link href="/teoria" className="text-gray-300 hover:text-upgrade-yellow transition-colors">
-                        Guia de RAG
+                        Guía de RAG
                       </Link>
                     </li>
                     <li>
@@ -83,7 +83,7 @@ export default function RootLayout({
 
                 {/* Collaboration */}
                 <div>
-                  <h3 className="font-semibold text-upgrade-yellow mb-3">Colaboracion</h3>
+                  <h3 className="font-semibold text-upgrade-yellow mb-3">Colaboración</h3>
                   <div className="flex items-center gap-4 mb-3">
                     <Image
                       src="/logoupgradehub.svg"
@@ -101,7 +101,7 @@ export default function RootLayout({
                     />
                   </div>
                   <p className="text-xs text-gray-400">
-                    Protocolo de actuacion 2025-2030 para impulsar el talento en competencias digitales.
+                    Protocolo de actuación 2025-2030 para impulsar el talento en competencias digitales.
                   </p>
                 </div>
               </div>

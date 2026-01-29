@@ -18,7 +18,7 @@ export default function StepDownload({
         Revisa y Descarga
       </h2>
       <p className="text-slate-600  mb-8">
-        Configura los ultimos detalles y descarga tu proyecto
+        Configura los últimos detalles y descarga tu proyecto
       </p>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -48,13 +48,13 @@ export default function StepDownload({
               </p>
             )}
             <p className="mt-1 text-xs text-slate-500 ">
-              Solo letras, numeros, guiones y guiones bajos
+              Solo letras, números, guiones y guiones bajos
             </p>
           </div>
 
           <div>
             <label htmlFor="project-description" className="block text-sm font-medium text-slate-700  mb-2">
-              Descripcion
+              Descripción
             </label>
             <textarea
               id="project-description"
@@ -92,7 +92,7 @@ export default function StepDownload({
 
         {/* Summary */}
         <div className="bg-slate-50  rounded-xl p-6">
-          <h3 className="font-semibold text-slate-900  mb-4">Resumen de Configuracion</h3>
+          <h3 className="font-semibold text-slate-900  mb-4">Resumen de Configuración</h3>
 
           <div className="space-y-3 text-sm">
             <SummaryRow label="Nivel" value={config.complexity} capitalize />
@@ -102,14 +102,14 @@ export default function StepDownload({
             <SummaryRow label="Vector DB" value={config.vectorDB.provider} />
             <SummaryRow label="Chunk size" value={String(config.chunking.chunkSize)} />
             <SummaryRow label="Top K" value={String(config.retrieval.topK)} />
-            <SummaryRow label="Busqueda hibrida" value={config.retrieval.useHybridSearch ? 'Si' : 'No'} />
-            <SummaryRow label="Reranking" value={config.retrieval.useReranking ? 'Si' : 'No'} />
+            <SummaryRow label="Búsqueda híbrida" value={config.retrieval.useHybridSearch ? 'Sí' : 'No'} />
+            <SummaryRow label="Reranking" value={config.retrieval.useReranking ? 'Sí' : 'No'} />
           </div>
 
           <div className="mt-6 pt-4 border-t border-slate-200 ">
             <h4 className="font-medium text-slate-900  mb-2">Archivos incluidos:</h4>
             <ul className="text-sm text-slate-600  space-y-1">
-              <li>- Codigo fuente Python completo</li>
+              <li>- Código fuente Python completo</li>
               <li>- requirements.txt</li>
               <li>- .env.example</li>
               <li>- README.md con instrucciones</li>
